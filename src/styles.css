@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "@fontsource-variable/jetbrains-mono";
+
+:root {
+  --system-font-primary: "JetBrains Mono Variable", monospace;
+
+  --system-color-black: #000000;
+  --system-color-black-01: #4f4f4f;
+  --system-color-black-02: #919191;
+
+  --system-color-outline-01: #cccccc;
+  --system-color-outline-02: #dedede;
+
+  --system-color-natural-0: #ffffff;
+  --system-color-natural-50: #fbfbf9;
+  --system-color-natural-100: #f4f4f0;
+  --system-color-natural-200: #e7e5e4;
+  --system-color-natural-300: #d6d3d1;
+  --system-color-natural-400: #a8a29e;
+  --system-color-natural-500: #78716c;
+  --system-color-primary-02: #e9dcfe;
+  --system-color-primary-01: #b286fd;
+  --system-color-info-01: #93aaed;
+  --system-color-info-02: #e9eefb;
+  --system-color-danger-01: #eb1c26;
+  --system-color-danger-02: #e2442f;
+  --system-color-danger-03: #fcebe9;
+  --system-color-warn-01: #ffc900;
+  --system-color-warn-02: #fffae5;
+  --system-color-success-01: #11a365;
+  --system-color-success-02: #d2feeb;
+  --system-color-border-01: #000000;
+
+  --system-color-neogreen-01: #a2e435;
+  --system-color-neogreen-02: #eafac9;
+}
+
+@theme inline {
+  /* Overwrite available colors */
+  --color-*: initial;
+  --color-white: var(--system-color-natural-0);
+  --color-black: var(--system-color-black);
+  --color-black-01: var(--system-color-black-01);
+  --color-black-02: var(--system-color-black-02);
+  --color-placeholder: var(--system-color-black-02);
+
+  --color-outline-01: var(--system-color-outline-01);
+  --color-outline-02: var(--system-color-outline-02);
+
+  --color-surface-background: var(--system-color-natural-100);
+  --color-surface-background-on: var(--system-color-black);
+  --color-surface-background-on-variant: var(--system-color-black-variant);
+  --color-surface-background-on-variant2: var(--system-color-black-variant2);
+
+  --color-primary: var(--system-color-primary-01);
+  --color-primary-on: var(--system-color-black);
+
+  --color-primary-01: var(--system-color-primary-01);
+  --color-primary-02: var(--system-color-primary-02);
+
+  --color-info-01: var(--system-color-info-01);
+  --color-info-02: var(--system-color-info-02);
+
+  --color-warn-01: var(--system-color-warn-01);
+  --color-warn-02: var(--system-color-warn-02);
+
+  --color-success-01: var(--system-color-success-01);
+  --color-success-02: var(--system-color-success-02);
+
+  --color-danger-01: var(--system-color-danger-01);
+  --color-danger-02: var(--system-color-danger-02);
+  --color-danger-03: var(--system-color-danger-03);
+  --color-danger-04: var(--system-color-danger-04);
+
+  --color-border-primary: var(--system-color-border-01);
+
+  --color-natural-0: var(--system-color-natural-0);
+  --color-natural-50: var(--system-color-natural-50);
+  --color-natural-100: var(--system-color-natural-100);
+  --color-natural-200: var(--system-color-natural-200);
+  --color-natural-300: var(--system-color-natural-300);
+  --color-natural-400: var(--system-color-natural-400);
+  --color-natural-500: var(--system-color-natural-500);
+
+  --color-neogreen-01: var(--system-color-neogreen-01);
+  --color-neogreen-02: var(--system-color-neogreen-02);
+
+  /** Custom opacities */
+  --opacity-disabled: 0.4;
+
+  /* Overwrite border radius */
+  --radius-*: initial;
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 8px;
+
+  /* Overwrite shadows */
+  --shadow-*: initial;
+  --shadow-xs: 1px 1px 0 0 var(--system-color-black);
+  --shadow-sm: 2px 2px 0 0 var(--system-color-black);
+  --shadow-md: 4px 4px 0 0 var(--system-color-black);
+  --shadow-lg: 8px 8px 0 0 var(--system-color-black);
+  --shadow-xl: 12px 12px 0 0 var(--system-color-black);
+  --shadow-sidepanel: 6px 0px 12px 0 var(--system-color-black);
+
+  /* Overwrite fonts */
+  --font-*: initial;
+  --font-sans: var(--system-font-primary);
+
+  /* Overwrite text */
+  --text-*: initial;
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+
+  --text-sm: 14px;
+  --text-sm--line-height: 140%;
+
+  --text-md: 16px;
+  --text-md--line-height: 160%;
+
+  --text-lg: 18px;
+  --text-lg--line-height: 150%;
+
+  --text-xl: 20px;
+  --text-xl--line-height: 150%;
+
+  --text-display-xs: 24px;
+  --text-display-xs--line-height: 130%;
+
+  --text-display-sm: 30px;
+  --text-display-sm--line-height: 130%;
+
+  --text-display-md: 36px;
+  --text-display-md--line-height: 132%;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 140%;
+  --text-display-lg--letter-spacing: -0.05em;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--system-font-primary), monospace;
+  background: var(--system-color-natural-50);
+  color: var(--color-surface-background-on);
+  @apply text-md;
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "meta_site_name": "Cedric Zitzmann",
+  "meta_title": "Cedric Zitzmann: Softwareentwickler",
+  "meta_description": "Cedric ist Full-Stack Softwareentwickler mit Fokus auf die Frontend-Entwicklung. Dabei bewegt er sich meistens in der Welt von TypeScript.",
+  "header_nav_home": "startseite",
+  "header_nav_about": "über mich",
+  "header_nav_blog": "blog",
+  "footer_nav_imprint": "impressum",
+  "footer_nav_privacy": "datenschutzhinweise",
+  "page_home_landing_title": "Hey, ich bin Cedric!",
+  "page_home_landing_description": "Ich bin Softwareentwickler und fühle mich in der Welt von TypeScript zu Hause. Aktuell arbeite ich als Frontend-Engineer bei {#a}Finanzfluss{/a}.",
+  "page_home_connect_title": "lass' uns connecten",
+  "page_home_connect_linkedin_title": "LinkedIn",
+  "page_home_connect_linkedin_subtitle": "/in/cedric-zitzmann",
+  "page_home_connect_github_title": "GitHub",
+  "page_home_connect_github_subtitle": "/z3ttee",
+  "page_home_connect_email_title": "E-Mail",
+  "page_home_connect_email_subtitle": "cedric.zitzmann@gmail.com"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zitzmann_dev",
+  "main": "@tanstack/react-start/server-entry",
+  "workers_dev": false,
+  "preview_urls": false,
+  "compatibility_date": "2026-01-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "zone_name": "zitzmann.dev",
+      "pattern": "zitzmann.dev",
+      "custom_domain": true
+    },
+    {
+      "zone_name": "zitzmann.dev",
+      "pattern": "www.zitzmann.dev",
+      "custom_domain": true
+    }
+  ]
+}
