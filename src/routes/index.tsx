@@ -152,13 +152,10 @@ function Home() {
         <ul className="grid grid-cols-2 mt-6 border border-outline-02">
           <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
             <p className="text-xs text-black-02 tracking-tight">01</p>
-            <p className="text-md font-medium tracking-tight">Project Soundcore</p>
+            <p className="text-md font-medium tracking-tight">{m.page_home_projects_p01_title()}</p>
 
             <div className="mt-4">
-              <p className="text-sm text-black-01">
-                Als Freizeitprojekt während meines Studiums entwickelt, entstand hieraus ein
-                Spotify-Klon, um Musik im lokalen Heimnetz zu verwalten und zu streamen.
-              </p>
+              <p className="text-sm text-black-01">{m.page_home_projects_p01_description()}</p>
             </div>
 
             <ul className="flex items-center gap-2 mt-2">
@@ -172,14 +169,10 @@ function Home() {
           </li>
           <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
             <p className="text-xs text-black-02 tracking-tight">02</p>
-            <p className="text-md font-medium tracking-tight">Uselessbox</p>
+            <p className="text-md font-medium tracking-tight">{m.page_home_projects_p02_title()}</p>
 
             <div className="mt-4">
-              <p className="text-sm text-black-01">
-                Eine etwas skurrile Verpackung für ein Geschenk: Eine Holzbox, die per Kippschalter
-                geöffnet wird. Der Haken: Die Box schaltet den Schalter eigenständig über einen
-                mechanischen Arm wieder um.
-              </p>
+              <p className="text-sm text-black-01">{m.page_home_projects_p02_description()}</p>
             </div>
 
             <ul className="flex items-center gap-2 mt-2">

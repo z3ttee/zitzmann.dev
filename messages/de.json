@@ -18,5 +18,9 @@
   "page_home_connect_email_title": "E-Mail",
   "page_home_connect_email_subtitle": "cedric.zitzmann@gmail.com",
   "page_home_projects_title": "bisherige projekte",
-  "page_home_projects_subtitle": "Hier findest du eine Auswahl bisheriger Projekte, die ich in meiner Freizeit umgesetzt habe. Meistens aus Spaß oder um etwas Neues zu lernen."
+  "page_home_projects_subtitle": "Hier findest du eine Auswahl bisheriger Projekte, die ich in meiner Freizeit umgesetzt habe. Meistens aus Spaß oder um etwas Neues zu lernen.",
+  "page_home_projects_p01_title": "Project Soundcore",
+  "page_home_projects_p01_description": "Als Freizeitprojekt während meines Studiums entwickelt, entstand hieraus ein Spotify-Klon, um Musik im lokalen Heimnetz zu verwalten und zu streamen.",
+  "page_home_projects_p02_title": "Uselessbox",
+  "page_home_projects_p02_description": "Eine etwas skurrile Verpackung für ein Geschenk: Eine Holzbox, die per Kippschalter geöffnet wird. Der Haken: Die Box schaltet den Schalter eigenständig über einen mechanischen Arm wieder um."
 }

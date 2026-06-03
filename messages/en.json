@@ -18,5 +18,9 @@
   "page_home_connect_email_title": "E-Mail",
   "page_home_connect_email_subtitle": "cedric.zitzmann@gmail.com",
   "page_home_projects_title": "past projects",
-  "page_home_projects_subtitle": "Here you can find a selection of past projects that I have worked on in my free time. Mostly out of fun or to learn something new."
+  "page_home_projects_subtitle": "Here you can find a selection of past projects that I have worked on in my free time. Mostly out of fun or to learn something new.",
+  "page_home_projects_p01_title": "Project Soundcore",
+  "page_home_projects_p01_description": "As a leisure project during my studies, this resulted in a Spotify clone to manage and stream music in the local home network.",
+  "page_home_projects_p02_title": "Uselessbox",
+  "page_home_projects_p02_description": "A somewhat quirky packaging for a gift: A wooden box that opens via a toggle switch. The catch: The box automatically toggles the switch back using a mechanical arm."
 }
