@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LegalPrivacyIndexRouteImport } from './routes/legal/privacy/index'
+import { Route as LegalImprintIndexRouteImport } from './routes/legal/imprint/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LegalPrivacyIndexRoute = LegalPrivacyIndexRouteImport.update({
+  id: '/legal/privacy/',
+  path: '/legal/privacy/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalImprintIndexRoute = LegalImprintIndexRouteImport.update({
+  id: '/legal/imprint/',
+  path: '/legal/imprint/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/legal/imprint/': typeof LegalImprintIndexRoute
+  '/legal/privacy/': typeof LegalPrivacyIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/legal/imprint': typeof LegalImprintIndexRoute
+  '/legal/privacy': typeof LegalPrivacyIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/legal/imprint/': typeof LegalImprintIndexRoute
+  '/legal/privacy/': typeof LegalPrivacyIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/legal/imprint/' | '/legal/privacy/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/legal/imprint' | '/legal/privacy'
+  id: '__root__' | '/' | '/legal/imprint/' | '/legal/privacy/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LegalImprintIndexRoute: typeof LegalImprintIndexRoute
+  LegalPrivacyIndexRoute: typeof LegalPrivacyIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/legal/privacy/': {
+      id: '/legal/privacy/'
+      path: '/legal/privacy'
+      fullPath: '/legal/privacy/'
+      preLoaderRoute: typeof LegalPrivacyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/imprint/': {
+      id: '/legal/imprint/'
+      path: '/legal/imprint'
+      fullPath: '/legal/imprint/'
+      preLoaderRoute: typeof LegalImprintIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LegalImprintIndexRoute: LegalImprintIndexRoute,
+  LegalPrivacyIndexRoute: LegalPrivacyIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
