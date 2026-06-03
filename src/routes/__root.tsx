@@ -1,13 +1,10 @@
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
-
 import { getLocale } from "@/paraglide/runtime";
 import { m } from "@/paraglide/messages";
-
 import appCss from "../styles.css?url";
-import { Header } from "@/components/Header/Header";
-import { Footer } from "@/components/Footer/Footer";
+import { Header, Footer } from "@/components";
 import { META_SITE_URL } from "@/constants";
 
 export const Route = createRootRoute({
@@ -77,8 +74,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <div className="container mx-auto flex flex-col size-full border border-dashed border-t-0 border-b-0 border-outline-02">
-          <Header />
+        <div className="max-w-[1200px] mx-auto flex flex-col size-full border border-dashed border-t-0 border-b-0 border-outline-02">
+          {/* <Header /> */}
           <div className="grow min-h-0">{children}</div>
           <Footer />
         </div>

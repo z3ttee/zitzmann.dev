@@ -6,7 +6,6 @@ export function Header() {
     <div className="flex items-stretch w-full border-b border-outline-02">
       <div className="flex items-center grow min-w-0">
         <Link className="px-6 text-black" to="/" activeOptions={{ exact: true }}>
-          <img src="/assets/logo.svg" alt="zitzmann.dev logo" className="inline-block h-6 w-6" />
           zitzmann.dev
         </Link>
       </div>
@@ -24,7 +23,7 @@ export function Header() {
               {m.header_nav_home}
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className="flex py-3 px-16 text-sm font-light text-black-01 hover:text-black border-l border-outline-02"
               to="/">
@@ -37,7 +36,7 @@ export function Header() {
               to="/">
               {m.header_nav_blog}
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

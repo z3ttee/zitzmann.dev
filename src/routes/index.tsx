@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
   return (
-    <div className="p-24">
+    <div className="p-6 md:p-12 xl:p-24">
       <h1 className="text-display-lg font-bold">{m.page_home_landing_title()}</h1>
       <p className="text-black-01 mt-2 max-w-[800px]">
         <ParaglideMessage
@@ -31,7 +31,52 @@ function Home() {
         />
       </p>
 
-      <div className="mt-24">
+      <div className="flex items-center justify-start gap-6 mt-10">
+        <a
+          tabIndex={0}
+          className="cursor-pointer p-1"
+          href={SOCIAL_LINKEDIN_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={m.page_home_connect_linkedin_title()}>
+          <img
+            src="/assets/linkedin-pixelart.svg"
+            alt={m.page_home_connect_linkedin_title()}
+            className="w-6 h-6"
+          />
+        </a>
+        <span className="inline-block h-4 w-[1px] bg-black-02 rotate-20"></span>
+        <a
+          tabIndex={0}
+          className="cursor-pointer p-1"
+          href={SOCIAL_GITHUB_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={m.page_home_connect_github_title()}>
+          <img
+            src="/assets/github-pixelart.svg"
+            alt={m.page_home_connect_github_title()}
+            className="w-6 h-6"
+          />
+        </a>
+
+        <span className="inline-block h-4 w-[1px] bg-black-02 rotate-20"></span>
+        <a
+          tabIndex={0}
+          className="cursor-pointer p-1"
+          href={SOCIAL_EMAIL_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={m.page_home_connect_email_title()}>
+          <img
+            src="/assets/mail-pixelart.svg"
+            alt={m.page_home_connect_email_title()}
+            className="w-6 h-6"
+          />
+        </a>
+      </div>
+
+      {/* <div className="mt-26">
         <h6 className="flex items-center justify-start gap-6 text-md font-normal text-black tracking-tight">
           {m.page_home_connect_title()}{" "}
           <span className="inline-block border-t border-t-outline-02 border-dashed h-0 grow" />
@@ -93,6 +138,58 @@ function Home() {
                 </p>
               </div>
             </a>
+          </li>
+        </ul>
+      </div> */}
+
+      <div className="mt-24">
+        <h6 className="flex items-center justify-start gap-6 text-md font-normal text-black tracking-tight">
+          {m.page_home_projects_title()}{" "}
+          <span className="inline-block border-t border-t-outline-02 border-dashed h-0 grow" />
+        </h6>
+        <p className="mt-2 text-black-02 text-sm">{m.page_home_projects_subtitle()}</p>
+
+        <ul className="grid grid-cols-2 mt-6 border border-outline-02">
+          <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
+            <p className="text-xs text-black-02 tracking-tight">01</p>
+            <p className="text-md font-medium tracking-tight">Project Soundcore</p>
+
+            <div className="mt-4">
+              <p className="text-sm text-black-01">
+                Als Freizeitprojekt während meines Studiums entwickelt, entstand hieraus ein
+                Spotify-Klon, um Musik im lokalen Heimnetz zu verwalten und zu streamen.
+              </p>
+            </div>
+
+            <ul className="flex items-center gap-2 mt-2">
+              <li title="TypeScript">
+                <img src="/assets/tech/typescript.svg" alt="TypeScript" className="w-5 h-5" />
+              </li>
+              <li title="Angular">
+                <img src="/assets/tech/angular.svg" alt="Angular" className="w-5 h-5" />
+              </li>
+            </ul>
+          </li>
+          <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
+            <p className="text-xs text-black-02 tracking-tight">02</p>
+            <p className="text-md font-medium tracking-tight">Uselessbox</p>
+
+            <div className="mt-4">
+              <p className="text-sm text-black-01">
+                Eine etwas skurrile Verpackung für ein Geschenk: Eine Holzbox, die per Kippschalter
+                geöffnet wird. Der Haken: Die Box schaltet den Schalter eigenständig über einen
+                mechanischen Arm wieder um.
+              </p>
+            </div>
+
+            <ul className="flex items-center gap-2 mt-2">
+              <li title="C++">
+                <img src="/assets/tech/cpp.svg" alt="C++" className="w-5 h-5" />
+              </li>
+              <li title="Espressif ESP32">
+                <img src="/assets/tech/espressif.svg" alt="Espressif ESP32" className="w-5 h-5" />
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
