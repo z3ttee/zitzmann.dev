@@ -74,7 +74,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <div className="max-w-[1200px] mx-auto flex flex-col size-full border border-dashed border-t-0 border-b-0 border-outline-02">
+        <div className="flex flex-col size-full border border-dashed border-t-0 border-b-0 border-outline-02">
           {/* <Header /> */}
           <div className="grow min-h-0">{children}</div>
           <Footer />

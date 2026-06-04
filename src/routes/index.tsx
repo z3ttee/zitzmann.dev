@@ -13,25 +13,27 @@ export const Route = createFileRoute("/")({ component: Home });
 function Home() {
   return (
     <div className="p-6 md:p-12 xl:p-24">
-      <h1 className="text-display-lg font-bold">{m.page_home_landing_title()}</h1>
-      <p className="text-black-01 mt-2 max-w-[800px]">
-        <ParaglideMessage
-          message={m.page_home_landing_description}
-          markup={{
-            a: ({ children }) => (
-              <a
-                href={CURRENT_EMPLOYER_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-inherit hover:underline-offset-4 hover:underline">
-                {children}
-              </a>
-            ),
-          }}
-        />
-      </p>
+      <div className="max-w-[1200px]">
+        <h1 className="text-display-lg font-extrabold">{m.page_home_landing_title()}</h1>
+        <p className="text-black-01 mt-2 max-w-[800px]">
+          <ParaglideMessage
+            message={m.page_home_landing_description}
+            markup={{
+              a: ({ children }) => (
+                <a
+                  href={CURRENT_EMPLOYER_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-inherit hover:underline-offset-4 hover:underline">
+                  {children}
+                </a>
+              ),
+            }}
+          />
+        </p>
+      </div>
 
-      <div className="flex items-center justify-start gap-6 mt-10">
+      <div className="max-w-[1200px] flex items-center justify-start gap-5 mt-10">
         <a
           tabIndex={0}
           className="cursor-pointer p-1"
@@ -142,23 +144,23 @@ function Home() {
         </ul>
       </div> */}
 
-      <div className="mt-24">
-        <h6 className="flex items-center justify-start gap-6 text-md font-normal text-black tracking-tight">
+      <div className="mt-20">
+        <h6 className="flex items-center justify-start gap-6 text-lg font-bold text-black tracking-tight">
           {m.page_home_projects_title()}{" "}
           <span className="inline-block border-t border-t-outline-02 border-dashed h-0 grow" />
         </h6>
         <p className="mt-2 text-black-02 text-sm">{m.page_home_projects_subtitle()}</p>
 
-        <ul className="grid grid-cols-2 mt-6 border border-outline-02">
+        <ul className="grid grid-cols-2 mt-6 border border-outline-02 max-w-[1200px]">
           <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
             <p className="text-xs text-black-02 tracking-tight">01</p>
             <p className="text-md font-medium tracking-tight">{m.page_home_projects_p01_title()}</p>
 
-            <div className="mt-4">
+            <div className="mt-2">
               <p className="text-sm text-black-01">{m.page_home_projects_p01_description()}</p>
             </div>
 
-            <ul className="flex items-center gap-2 mt-2">
+            <ul className="flex items-center gap-2 mt-3">
               <li title="TypeScript">
                 <img src="/assets/tech/typescript.svg" alt="TypeScript" className="w-5 h-5" />
               </li>
@@ -171,11 +173,11 @@ function Home() {
             <p className="text-xs text-black-02 tracking-tight">02</p>
             <p className="text-md font-medium tracking-tight">{m.page_home_projects_p02_title()}</p>
 
-            <div className="mt-4">
+            <div className="mt-2">
               <p className="text-sm text-black-01">{m.page_home_projects_p02_description()}</p>
             </div>
 
-            <ul className="flex items-center gap-2 mt-2">
+            <ul className="flex items-center gap-2 mt-3">
               <li title="C++">
                 <img src="/assets/tech/cpp.svg" alt="C++" className="w-5 h-5" />
               </li>

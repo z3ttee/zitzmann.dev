@@ -4,7 +4,7 @@ import { Divider } from "../Divider";
 
 export function Footer() {
   return (
-    <div className="@container px-6 md:px-12 xl:px-24 py-4 xl:py-6">
+    <div className="@container px-6 md:px-12 xl:px-24 py-4 xl:py-6 border-t border-outline-02">
       <div className="flex items-stretch w-full gap-4 flex-col @xl:flex-row @xl:gap-12">
         <div className="flex items-center grow min-w-0 text-sm text-black-02 font-extralight @xl:justify-start justify-center">
           <p>&copy; {new Date().getFullYear()} Cedric Zitzmann</p>

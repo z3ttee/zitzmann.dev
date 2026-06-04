@@ -4,22 +4,22 @@
 :root {
   --system-font-primary: "JetBrains Mono Variable", monospace;
 
-  --system-color-black: #000000;
-  --system-color-black-01: #4f4f4f;
-  --system-color-black-02: #919191;
+  --system-color-black: hsl(30, 6%, 12%);
+  --system-color-black-01: hsl(30, 6%, 30%);
+  --system-color-black-02: hsl(30, 6%, 60%);
 
   --system-color-outline-01: #cccccc;
-  --system-color-outline-02: #dedede;
+  --system-color-outline-02: #d6d6d6;
 
   --system-color-natural-0: #ffffff;
   --system-color-natural-50: #fbfbf9;
-  --system-color-natural-100: #f4f4f0;
+  --system-color-natural-100: #f4f3f0;
   --system-color-natural-200: #e7e5e4;
   --system-color-natural-300: #d6d3d1;
   --system-color-natural-400: #a8a29e;
   --system-color-natural-500: #78716c;
-  --system-color-primary-02: #e9dcfe;
-  --system-color-primary-01: #b286fd;
+  --system-color-primary-02: #feefdc;
+  --system-color-primary-01: #fdb486;
   --system-color-info-01: #93aaed;
   --system-color-info-02: #e9eefb;
   --system-color-danger-01: #eb1c26;
@@ -46,11 +46,6 @@
 
   --color-outline-01: var(--system-color-outline-01);
   --color-outline-02: var(--system-color-outline-02);
-
-  --color-surface-background: var(--system-color-natural-100);
-  --color-surface-background-on: var(--system-color-black);
-  --color-surface-background-on-variant: var(--system-color-black-variant);
-  --color-surface-background-on-variant2: var(--system-color-black-variant2);
 
   --color-primary: var(--system-color-primary-01);
   --color-primary-on: var(--system-color-black);
@@ -151,7 +146,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: var(--system-font-primary), monospace;
-  background: var(--system-color-natural-50);
-  color: var(--color-surface-background-on);
+  background: var(--system-color-natural-100);
+  color: var(--system-color-black);
   @apply text-md;
 }
