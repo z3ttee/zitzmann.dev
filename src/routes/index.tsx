@@ -151,8 +151,8 @@ function Home() {
         </h6>
         <p className="mt-2 text-black-02 text-sm">{m.page_home_projects_subtitle()}</p>
 
-        <ul className="grid grid-cols-2 mt-6 border border-outline-02 max-w-[1200px]">
-          <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
+        <ul className="grid grid-cols-1 lg:grid-cols-2 mt-6 border border-outline-02 max-w-[1200px]">
+          <li className="p-4 lg:border-r border-b lg:border-b-0 border-outline-02 hover:bg-natural-100">
             <p className="text-xs text-black-02 tracking-tight">01</p>
             <p className="text-md font-medium tracking-tight">{m.page_home_projects_p01_title()}</p>
 
@@ -169,7 +169,7 @@ function Home() {
               </li>
             </ul>
           </li>
-          <li className="p-4 border-r border-b border-outline-02 hover:bg-natural-100">
+          <li className="p-4 border-0 border-outline-02 hover:bg-natural-100">
             <p className="text-xs text-black-02 tracking-tight">02</p>
             <p className="text-md font-medium tracking-tight">{m.page_home_projects_p02_title()}</p>
 
