@@ -1,21 +1,36 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import Logo from "@assets/logo.svg?react";
 import { m } from "@/paraglide/messages";
 
 export function Header() {
-  return (
-    <header className="sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100">
-      <div className="flex items-center grow min-w-0">
-        <Link
-          className="text-black outline-bracket"
-          to="/"
-          activeOptions={{ exact: true }}
-          aria-label={m.header_nav_home()}>
-          <Logo width={36} height={36} aria-hidden />
-        </Link>
-      </div>
+  const [isStuck, setIsStuck] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
-      {/* <nav className="min-w-max">
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(([entry]) => setIsStuck(!entry.isIntersecting));
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      <div ref={sentinelRef} aria-hidden="true" />
+      <header
+        className={`z-100 sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100${isStuck ? " border-b border-outline-02" : ""}`}>
+        <div className="flex items-center grow min-w-0">
+          <Link
+            className="text-black outline-bracket"
+            to="/"
+            activeOptions={{ exact: true }}
+            aria-label={m.header_nav_home()}>
+            <Logo width={36} height={36} aria-hidden />
+          </Link>
+        </div>
+
+        {/* <nav className="min-w-max">
         <ul className="flex items-center justify-end">
           <li>
             <Link
@@ -44,6 +59,7 @@ export function Header() {
           </li>
         </ul>
       </nav> */}
-    </header>
+      </header>
+    </>
   );
 }
