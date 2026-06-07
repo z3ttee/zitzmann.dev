@@ -24,7 +24,7 @@ function Home() {
                   href={CURRENT_EMPLOYER_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-inherit hover:underline-offset-4 hover:underline">
+                  className="text-inherit outline-bracket">
                   {children}
                 </a>
               ),
@@ -36,7 +36,7 @@ function Home() {
       <div className="max-w-[1200px] flex items-center justify-start gap-5 mt-10">
         <a
           tabIndex={0}
-          className="cursor-pointer p-1"
+          className="cursor-pointer p-1 outline-bracket"
           href={SOCIAL_LINKEDIN_LINK}
           target="_blank"
           rel="noopener noreferrer"
@@ -50,7 +50,7 @@ function Home() {
         <span className="inline-block h-4 w-[1px] bg-black-02 rotate-20"></span>
         <a
           tabIndex={0}
-          className="cursor-pointer p-1"
+          className="cursor-pointer p-1 outline-bracket"
           href={SOCIAL_GITHUB_LINK}
           target="_blank"
           rel="noopener noreferrer"
@@ -65,7 +65,7 @@ function Home() {
         <span className="inline-block h-4 w-[1px] bg-black-02 rotate-20"></span>
         <a
           tabIndex={0}
-          className="cursor-pointer p-1"
+          className="cursor-pointer p-1 outline-bracket"
           href={SOCIAL_EMAIL_LINK}
           target="_blank"
           rel="noopener noreferrer"

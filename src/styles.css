@@ -10,6 +10,7 @@
 
   --system-color-outline-01: #cccccc;
   --system-color-outline-02: #d6d6d6;
+  --system-color-outline-03: #e5e5e5;
 
   --system-color-natural-0: #ffffff;
   --system-color-natural-50: #fbfbf9;
@@ -139,6 +140,58 @@
   --text-display-lg: 48px;
   --text-display-lg--line-height: 140%;
   --text-display-lg--letter-spacing: -0.05em;
+}
+
+@utility outline-bracket {
+  position: relative;
+  outline: none;
+  @apply transition-all;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: calc(100%);
+    border: 1px solid var(--system-color-black);
+    top: 50%;
+    opacity: 0;
+    will-change: transform, opacity;
+    @apply transition-all;
+  }
+
+  &::before {
+    left: -6px;
+    border-width: 2px 0 2px 2px;
+    transform: translateY(-50%) translateX(-2px);
+  }
+
+  &::after {
+    right: -6px;
+    border-width: 2px 2px 2px 0;
+    transform: translateY(-50%) translateX(2px);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--system-color-outline-03);
+    @apply text-black;
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+
+    &::before {
+      background: var(--system-color-outline-03);
+      transform: translateY(-50%) translateX(0);
+    }
+
+    &::after {
+      background: var(--system-color-outline-03);
+      transform: translateY(-50%) translateX(0);
+    }
+  }
 }
 
 html,
