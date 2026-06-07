@@ -19,7 +19,7 @@ export function Header() {
     <>
       <div ref={sentinelRef} aria-hidden="true" />
       <header
-        className={`z-100 sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100${isStuck ? " border-b border-outline-02" : ""}`}>
+        className={`z-[999999] sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100${isStuck ? " border-b border-outline-02" : ""}`}>
         <div className="flex items-center grow min-w-0">
           <Link
             className="text-black outline-bracket"
