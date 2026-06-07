@@ -80,7 +80,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="relative flex flex-col min-h-screen pt-6 border">
         <Header />
-        <div className="grow pt-20 pb-14">{children}</div>
+        <main role="main" className="grow pt-20 pb-14">
+          {children}
+        </main>
         <Footer />
         <TanStackDevtools
           config={{

@@ -4,9 +4,9 @@
 :root {
   --system-font-primary: "JetBrains Mono Variable", monospace;
 
-  --system-color-black: hsl(30, 6%, 12%);
-  --system-color-black-01: hsl(30, 6%, 30%);
-  --system-color-black-02: hsl(30, 6%, 60%);
+  --system-color-black: hsl(30, 6%, 8%);
+  --system-color-black-01: hsl(30, 6%, 23%);
+  --system-color-black-02: hsl(30, 6%, 43%);
 
   --system-color-outline-01: #cccccc;
   --system-color-outline-02: #d6d6d6;

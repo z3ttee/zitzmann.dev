@@ -79,10 +79,10 @@ function Home() {
       </div>
 
       <div className="mt-20">
-        <h6 className="flex items-center justify-start gap-6 text-lg font-bold text-black tracking-tight">
+        <h2 className="flex items-center justify-start gap-6 text-lg font-bold text-black tracking-tight">
           {m.page_home_projects_title()}{" "}
           <span className="inline-block border-t border-t-outline-02 border-dashed h-0 grow" />
-        </h6>
+        </h2>
         <p className="mt-2 text-black-02 text-sm">{m.page_home_projects_subtitle()}</p>
 
         <ul className="grid grid-cols-1 lg:grid-cols-2 mt-6 border border-outline-02 max-w-[1200px]">

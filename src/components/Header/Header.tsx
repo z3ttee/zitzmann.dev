@@ -1,12 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import Logo from "@assets/logo.svg?react";
+import { m } from "@/paraglide/messages";
 
 export function Header() {
   return (
-    <div className="sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full">
+    <header className="sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full">
       <div className="flex items-center grow min-w-0">
-        <Link className="text-black outline-bracket" to="/" activeOptions={{ exact: true }}>
-          <Logo width={36} height={36} />
+        <Link
+          className="text-black outline-bracket"
+          to="/"
+          activeOptions={{ exact: true }}
+          aria-label={m.header_nav_home()}>
+          <Logo width={36} height={36} aria-hidden />
         </Link>
       </div>
 
@@ -39,6 +44,6 @@ export function Header() {
           </li>
         </ul>
       </nav> */}
-    </div>
+    </header>
   );
 }
