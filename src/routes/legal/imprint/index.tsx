@@ -7,7 +7,7 @@ export const Route = createFileRoute("/legal/imprint/")({
 
 function RouteComponent() {
   return (
-    <div className="p-6 md:p-12 xl:p-24">
+    <div className="px-6 md:px-12 xl:px-24">
       <h1 className="text-display-lg font-bold">Impressum</h1>
 
       <ul className="mt-8">
