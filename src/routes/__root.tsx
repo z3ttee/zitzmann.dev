@@ -58,7 +58,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="relative flex flex-col min-h-screen pt-6 border">
+      <body className="relative flex flex-col min-h-screen pt-6">
         <Header />
         <main role="main" className="grow pt-20 pb-14">
           {children}

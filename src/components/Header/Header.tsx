@@ -4,7 +4,7 @@ import { m } from "@/paraglide/messages";
 
 export function Header() {
   return (
-    <header className="sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full">
+    <header className="sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100">
       <div className="flex items-center grow min-w-0">
         <Link
           className="text-black outline-bracket"
