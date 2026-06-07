@@ -1,6 +1,6 @@
 {
-  "short_name": "TanStack App",
-  "name": "Create TanStack App Sample",
+  "short_name": "Cedric Zitzmann",
+  "name": "Cedric Zitzmann: Softwareentwickler based in Erfurt",
   "icons": [
     {
       "src": "/assets/favicon.svg",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#fdb486",
+  "background_color": "#f4f3f0"
 }
