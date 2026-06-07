@@ -10,14 +10,14 @@ function RouteComponent() {
     <div className="p-6 md:p-12 xl:p-24">
       <h1 className="text-display-lg font-bold">Impressum</h1>
 
-      <ul>
+      <ul className="mt-8">
         <li>Cedric Zitzmann</li>
         <li>Flensburger Str. 19</li>
         <li>99085 Erfurt</li>
       </ul>
 
-      <h2 className="text-display-xs font-bold">Kontakt</h2>
-      <ul>
+      <h2 className="text-display-xs font-bold mt-8">Kontakt</h2>
+      <ul className="mt-2">
         <li>
           E-Mail:{" "}
           <a className="outline-bracket" href={SOCIAL_EMAIL_LINK}>
@@ -26,8 +26,8 @@ function RouteComponent() {
         </li>
       </ul>
 
-      <h2 className="text-display-xs font-bold">Redaktionell verantwortlich</h2>
-      <ul>
+      <h2 className="text-display-xs font-bold mt-8">Redaktionell verantwortlich</h2>
+      <ul className="mt-2">
         <li>Cedric Zitzmann</li>
         <li>Flensburger Str. 19</li>
         <li>99085 Erfurt</li>
