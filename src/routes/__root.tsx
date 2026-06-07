@@ -6,6 +6,8 @@ import { m } from "@/paraglide/messages";
 import appCss from "../styles.css?url";
 import { Footer, Header } from "@/components";
 import { META_SITE_URL } from "@/constants";
+import { RICH_RESULT_PERSON, RICH_RESULT_PROFESSIONAL_SERVICE } from "@/seo/richResults";
+import { generateMainTags } from "@/seo/tagsGeneration";
 
 export const Route = createRootRoute({
   beforeLoad: async (req) => {
@@ -20,55 +22,33 @@ export const Route = createRootRoute({
       document.documentElement.setAttribute("lang", getLocale());
     }
   },
-  head: () => ({
-    meta: [
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      {
-        title: m.meta_title(),
-      },
-      {
-        name: "description",
-        content: m.meta_description(),
-      },
-      {
-        property: "og:site_name",
-        content: m.meta_site_name(),
-      },
-      {
-        property: "og:url",
-        content: META_SITE_URL,
-      },
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:title",
-        content: m.meta_title(),
-      },
-      {
-        property: "og:description",
-        content: m.meta_description(),
-      },
-    ],
-    links: [
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        href: "/assets/favicon.svg",
-      },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
+  head: () => {
+    return {
+      meta: [
+        ...generateMainTags(),
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { title: m.meta_title() },
+      ],
+      links: [
+        { rel: "icon", type: "image/svg+xml", href: "/assets/favicon.svg" },
+        { rel: "stylesheet", href: appCss },
+        { rel: "alternate", hreflang: "en", href: `${META_SITE_URL}/` },
+        { rel: "alternate", hreflang: "de", href: `${META_SITE_URL}/de/` },
+        { rel: "alternate", hreflang: "x-default", href: `${META_SITE_URL}/` },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(RICH_RESULT_PERSON),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(RICH_RESULT_PROFESSIONAL_SERVICE),
+        },
+      ],
+    };
+  },
   shellComponent: RootDocument,
 });
 
