@@ -4,7 +4,7 @@ import { TanStackDevtools } from "@tanstack/react-devtools";
 import { getLocale, shouldRedirect } from "@/paraglide/runtime";
 import { m } from "@/paraglide/messages";
 import appCss from "../styles.css?url";
-import { Footer } from "@/components";
+import { Footer, Header } from "@/components";
 import { META_SITE_URL } from "@/constants";
 
 export const Route = createRootRoute({
@@ -61,7 +61,7 @@ export const Route = createRootRoute({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/assets/logo.svg",
+        href: "/assets/favicon.svg",
       },
       {
         rel: "stylesheet",
@@ -74,16 +74,14 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={getLocale()}>
+    <html lang={getLocale()} className="antialiased">
       <head>
         <HeadContent />
       </head>
-      <body>
-        <div className="flex flex-col size-full border border-dashed border-t-0 border-b-0 border-outline-02">
-          {/* <Header /> */}
-          <div className="grow min-h-0">{children}</div>
-          <Footer />
-        </div>
+      <body className="relative flex flex-col min-h-screen pt-6 border">
+        <Header />
+        <div className="grow pt-20 pb-14">{children}</div>
+        <Footer />
         <TanStackDevtools
           config={{
             position: "bottom-right",

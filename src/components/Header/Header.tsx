@@ -1,16 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import { m } from "@/paraglide/messages";
+import Logo from "@assets/logo.svg?react";
 
 export function Header() {
   return (
-    <div className="flex items-stretch w-full border-b border-outline-02">
+    <div className="sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full">
       <div className="flex items-center grow min-w-0">
-        <Link className="px-6 text-black" to="/" activeOptions={{ exact: true }}>
-          zitzmann.dev
+        <Link className="text-black outline-bracket" to="/" activeOptions={{ exact: true }}>
+          <Logo width={36} height={36} />
         </Link>
       </div>
 
-      <nav className="min-w-max">
+      {/* <nav className="min-w-max">
         <ul className="flex items-center justify-end">
           <li>
             <Link
@@ -23,7 +23,7 @@ export function Header() {
               {m.header_nav_home}
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
               className="flex py-3 px-16 text-sm font-light text-black-01 hover:text-black border-l border-outline-02"
               to="/">
@@ -36,9 +36,9 @@ export function Header() {
               to="/">
               {m.header_nav_blog}
             </Link>
-          </li> */}
+          </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 }
