@@ -17,5 +17,11 @@
       "pattern": "www.zitzmann.dev",
       "custom_domain": true
     }
-  ]
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  }
 }
