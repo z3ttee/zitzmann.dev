@@ -1,0 +1,8 @@
+# Cache images and fonts for a month
+# Cacheed JS and CSS build bundles are invalidated after they change their hashes
+/assets/*
+  Cache-Control: public, max-age=2592000, immutable
+
+# Optional: Disable caching for dynamic HTML on SSR routes
+/api/*
+  Cache-Control: no-cache, no-store, must-revalidate
