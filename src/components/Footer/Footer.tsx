@@ -13,7 +13,9 @@ export function Footer() {
         <nav className="min-w-max">
           <ul className="flex items-center justify-center @xl:justify-end gap-5">
             <li className="flex items-center">
-              <Link className="flex text-sm font-extralight text-black-02 outline-bracket" to="/">
+              <Link
+                className="flex text-sm font-extralight text-black-02 outline-bracket"
+                to="/legal/imprint">
                 {m.footer_nav_imprint()}
               </Link>
             </li>
