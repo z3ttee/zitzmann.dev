@@ -1,14 +1,19 @@
-import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
+import { HeadContent, Scripts, createRootRoute, redirect } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
-import { getLocale } from "@/paraglide/runtime";
+import { getLocale, shouldRedirect } from "@/paraglide/runtime";
 import { m } from "@/paraglide/messages";
 import appCss from "../styles.css?url";
-import { Header, Footer } from "@/components";
+import { Footer } from "@/components";
 import { META_SITE_URL } from "@/constants";
 
 export const Route = createRootRoute({
-  beforeLoad: async () => {
+  beforeLoad: async (req) => {
+    const decision = await shouldRedirect({ url: req.location.href });
+    if (decision.redirectUrl) {
+      throw redirect({ href: decision.redirectUrl.href });
+    }
+
     // Other redirect strategies are possible; see
     // https://github.com/TanStack/router/tree/main/examples/react/i18n-paraglide#offline-redirect
     if (typeof document !== "undefined") {
