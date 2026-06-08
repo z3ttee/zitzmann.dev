@@ -33,9 +33,9 @@ export const Route = createRootRoute({
       links: [
         { rel: "icon", type: "image/svg+xml", href: "/assets/favicon.svg" },
         { rel: "stylesheet", href: appCss },
-        { rel: "alternate", hreflang: "en", href: `${META_SITE_URL}/` },
-        { rel: "alternate", hreflang: "de", href: `${META_SITE_URL}/de/` },
-        { rel: "alternate", hreflang: "x-default", href: `${META_SITE_URL}/` },
+        { rel: "alternate", hrefLang: "en", href: `${META_SITE_URL}/` },
+        { rel: "alternate", hrefLang: "de", href: `${META_SITE_URL}/de/` },
+        { rel: "alternate", hrefLang: "x-default", href: `${META_SITE_URL}/` },
       ],
       scripts: [
         {
