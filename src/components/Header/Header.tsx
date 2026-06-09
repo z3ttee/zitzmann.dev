@@ -2,15 +2,28 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import Logo from "@assets/logo.svg?react";
 import { m } from "@/paraglide/messages";
+import { cva } from "class-variance-authority";
+
+const headerVariants = cva(
+  "z-[999999] sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100",
+  {
+    variants: {
+      isSticky: {
+        true: "border-b border-outline-02",
+        false: "",
+      },
+    },
+  },
+);
 
 export function Header() {
-  const [isStuck, setIsStuck] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const sentinelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const sentinel = sentinelRef.current;
     if (!sentinel) return;
-    const observer = new IntersectionObserver(([entry]) => setIsStuck(!entry.isIntersecting));
+    const observer = new IntersectionObserver(([entry]) => setIsSticky(!entry.isIntersecting));
     observer.observe(sentinel);
     return () => observer.disconnect();
   }, []);
@@ -18,8 +31,7 @@ export function Header() {
   return (
     <>
       <div ref={sentinelRef} aria-hidden="true" />
-      <header
-        className={`z-[999999] sticky top-0 px-6 md:px-12 xl:px-24 py-5 flex items-center w-full bg-natural-100${isStuck ? " border-b border-outline-02" : ""}`}>
+      <header className={headerVariants({ isSticky })}>
         <div className="flex items-center grow min-w-0">
           <Link
             className="text-black outline-bracket"
