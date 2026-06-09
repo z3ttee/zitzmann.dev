@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import Logo from "@assets/logo.svg?react";
 import { m } from "@/paraglide/messages";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import { cva } from "class-variance-authority";
 
 const headerVariants = cva(
@@ -40,6 +41,10 @@ export function Header() {
             aria-label={m.header_nav_home()}>
             <Logo width={36} height={36} aria-hidden />
           </Link>
+        </div>
+
+        <div className="flex items-center justify-end min-w-max">
+          <ThemeToggle />
         </div>
 
         {/* <nav className="min-w-max">

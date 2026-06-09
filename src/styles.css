@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource-variable/jetbrains-mono";
 
-:root {
+html[data-theme="light"] {
   --system-font-primary: "JetBrains Mono Variable", monospace;
 
   --system-color-black: hsl(30, 6%, 8%);
@@ -19,6 +19,29 @@
   --system-color-natural-300: #d6d3d1;
   --system-color-natural-400: #a8a29e;
   --system-color-natural-500: #78716c;
+}
+
+html[data-theme="dark"] {
+  --system-font-primary: "JetBrains Mono Variable", monospace;
+
+  --system-color-black: hsl(30, 6%, 90%);
+  --system-color-black-01: hsl(30, 6%, 77%);
+  --system-color-black-02: hsl(30, 6%, 57%);
+
+  --system-color-outline-01: hsl(0, 0%, 30%);
+  --system-color-outline-02: hsl(0, 0%, 24%);
+  --system-color-outline-03: hsl(0, 0%, 16%);
+
+  --system-color-natural-0: hsl(0, 0%, 0%);
+  --system-color-natural-50: hsl(60, 20%, 3%);
+  --system-color-natural-100: hsl(45, 15%, 6%);
+  --system-color-natural-200: hsl(20, 6%, 12%);
+  --system-color-natural-300: hsl(24, 6%, 17%);
+  --system-color-natural-400: hsl(24, 5%, 36%);
+  --system-color-natural-500: hsl(25, 5%, 55%);
+}
+
+html {
   --system-color-primary-02: #feefdc;
   --system-color-primary-01: #fdb486;
   --system-color-info-01: #93aaed;

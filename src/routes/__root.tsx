@@ -5,7 +5,7 @@ import { getLocale, shouldRedirect } from "@/paraglide/runtime";
 import { m } from "@/paraglide/messages";
 import appCss from "../styles.css?url";
 import { Footer, Header } from "@/components";
-import { META_SITE_URL } from "@/constants";
+import { DEFAULT_THEME, META_SITE_URL } from "@/constants";
 import { RICH_RESULT_PERSON, RICH_RESULT_PROFESSIONAL_SERVICE } from "@/seo/richResults";
 import { generateMainTags } from "@/seo/tagsGeneration";
 
@@ -54,7 +54,7 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={getLocale()} className="antialiased">
+    <html lang={getLocale()} className="antialiased" data-theme={DEFAULT_THEME}>
       <head>
         <HeadContent />
       </head>
