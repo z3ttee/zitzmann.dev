@@ -8,5 +8,6 @@ export const SOCIAL_EMAIL = "cedric.zitzmann@gmail.com";
 export const SOCIAL_EMAIL_LINK = `mailto:${SOCIAL_EMAIL}`;
 
 export const LEGAL_SOURCE_LINK = "https://www.e-recht24.de/";
+export const LEGAL_IMPRINT_LINK = "https://www.zitzmann.dev/legal/imprint/";
 
 export const DEFAULT_THEME = "light";

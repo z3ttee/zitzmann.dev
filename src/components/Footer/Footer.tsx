@@ -23,7 +23,9 @@ export function Footer() {
               <Divider />
             </li>
             <li className="flex items-center">
-              <Link className="flex text-sm font-extralight text-black-02 outline-bracket" to="/">
+              <Link
+                className="flex text-sm font-extralight text-black-02 outline-bracket"
+                to="/legal/privacy">
                 {m.footer_nav_privacy()}
               </Link>
             </li>
