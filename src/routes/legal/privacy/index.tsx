@@ -695,6 +695,36 @@ function RouteComponent() {
               </a>
               .
             </li>
+            <li className="list-disc">
+              <strong>Cloudflare: </strong>Leistungen auf dem Gebiet der Bereitstellung von
+              informationstechnischer Infrastruktur und verbundenen Dienstleistungen (z.B.
+              Speicherplatz und/oder Rechenkapazitäten); Leistungen auf dem Gebiet der Web-Analyse
+              Tools; <strong>Dienstanbieter:</strong> Cloudflare Germany GmbH , c/o Design Offices
+              München Atlas, Rosenheimer Straße 143C - 8. Stock, 81671 München, Deutschland;{" "}
+              <span className="">
+                <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit.
+                f) DSGVO);{" "}
+              </span>
+              <strong>Website:</strong>{" "}
+              <a className="outline-bracket" href="https://www.cloudflare.com" target="_blank">
+                https://www.cloudflare.com
+              </a>
+              ; <strong>Datenschutzerklärung:</strong>{" "}
+              <a
+                className="outline-bracket"
+                href="https://www.cloudflare.com/privacypolicy/"
+                target="_blank">
+                https://www.cloudflare.com/privacypolicy/
+              </a>
+              . <strong>Auftragsverarbeitungsvertrag:</strong>{" "}
+              <a
+                className="outline-bracket"
+                href="https://www.cloudflare.com/cloudflare-customer-dpa/"
+                target="_blank">
+                https://www.cloudflare.com/cloudflare-customer-dpa/
+              </a>
+              .
+            </li>
           </ul>
         </div>
 
